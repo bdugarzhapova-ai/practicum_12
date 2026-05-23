@@ -1,0 +1,22 @@
+def factorial(n):
+    """
+    Рекурсивно вычисляет факториал числа n
+    """
+    if n == 0 or n == 1:
+        return 1
+    return n * factorial(n - 1)
+
+
+def combin(n, k):
+    """
+    Вычисляет C(n, k)
+    """
+    if k > n:
+        return 0
+    if k == 0 or k == n:
+        return 1
+
+    return factorial(n) // (factorial(k) * factorial(n - k))
+
+
+print(combin(5, 2))
