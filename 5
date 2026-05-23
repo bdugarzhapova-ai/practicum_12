@@ -1,0 +1,11 @@
+def mod_number(a, b):
+    """
+    Находит остаток от деления натурального числа a на натуральное число b
+    """
+    if a < b:
+        return a
+
+    return mod_number(a - b, b)
+
+
+print(mod_number(17, 5))
