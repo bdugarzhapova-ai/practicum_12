@@ -1,0 +1,10 @@
+def pownum(a, n):
+    """
+    Возводит число a в натуральную степень n
+    """
+    if n == 1:
+        return a
+    return a * pownum(a, n - 1)
+
+
+print(pownum(2, 3))
