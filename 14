@@ -1,0 +1,17 @@
+def numbers_return(x):
+    """
+    Возвращает список цифр числа x в обратном порядке.
+    """
+    if x < 0:
+        x = -x
+
+    if x < 10:
+        return [x]
+
+    rest = numbers_return(x // 10)
+    return [x % 10] + rest
+
+
+result = numbers_return(12345)
+for digit in result:
+    print(digit)
