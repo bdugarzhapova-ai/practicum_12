@@ -1,0 +1,13 @@
+def ten_to_n(x, n):
+    """
+    Переводит натуральное число x из десятичной системы в n-ричную.
+    """
+    digits = "0123456789ABCDEF"
+
+    if x < n:
+        return digits[x]
+
+    return ten_to_n(x // n, n) + digits[x % n]
+
+
+print(ten_to_n(42, 2))
