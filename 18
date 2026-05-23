@@ -1,0 +1,14 @@
+def simmetr(s, i, j):
+    """
+    Определяет, является ли симметричной часть строки s от i до j
+    """
+    if i >= j:
+        return True
+
+    if s[i] != s[j]:
+        return False
+
+    return simmetr(s, i + 1, j - 1)
+
+
+print(simmetr("radar", 0, 4))
