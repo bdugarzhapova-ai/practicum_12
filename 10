@@ -1,0 +1,10 @@
+def maxlist(a):
+    """
+    Находит максимальный элемент списка (компактная версия).
+    """
+    if len(a) == 1:
+        return a[0]
+    return max(a[0], maxlist(a[1:]))
+
+
+print(maxlist([3, 7, 2, 9, 5]))
