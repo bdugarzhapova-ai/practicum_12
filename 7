@@ -1,0 +1,19 @@
+def nod(a, b):
+    """
+    Находит НОД через рекурсивное вычитание
+    """
+    if a == b:
+        return a
+
+    if a == 0:
+        return b
+    if b == 0:
+        return a
+
+    if a > b:
+        return nod(a - b, b)
+    else:
+        return nod(a, b - a)
+
+
+print(nod(12, 18))
